@@ -104,46 +104,62 @@ body:has(.reference-hero) .top .outline{border-color:#fffdd18a}
 .intro{position:fixed;inset:0;z-index:100;background:#050605;color:#f5f6f0;overflow:hidden;display:grid;place-items:center;transition:opacity .7s ease,visibility .7s}.intro.done{opacity:0;visibility:hidden;pointer-events:none}.intro>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52;filter:saturate(.7)}.intro-shade{position:absolute;inset:0;background:linear-gradient(90deg,#050605dc,#05060555),linear-gradient(0deg,#050605d0,transparent 65%)}.intro-inner{position:relative;z-index:1;width:min(1200px,calc(100% - 48px));display:flex;flex-direction:column;align-items:flex-start}.intro-inner>img{width:180px;height:100px;object-fit:contain;margin:20px 0}.intro-inner h2{font-size:clamp(64px,13vw,190px);line-height:.84;letter-spacing:-.095em;margin:10px 0 40px;font-weight:800}.intro-inner h2 i{font-style:normal;color:var(--lime)}.intro-enter{border:1px solid var(--lime);background:var(--lime);color:#090b0a;padding:19px 27px;font-size:12px;font-weight:800;letter-spacing:.12em;border-radius:100px}.intro-enter span{margin-left:22px}.intro-skip{background:none;border:0;color:#fff9;letter-spacing:.18em;font-size:10px;margin-top:26px;padding:10px 0}.services-section{background:#0e110e;border-block:1px solid var(--line)}.services-section h2 em{font-style:normal;color:var(--lime)}.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#343a32;border:1px solid #343a32}.service{background:#101510;padding:35px;min-height:280px;display:flex;flex-direction:column;transition:background .3s}.service:hover{background:#1b251a}.service>span,.service>a{font:10px 'DM Mono',monospace;letter-spacing:.12em;color:var(--lime)}.service h3{font-size:clamp(23px,2.5vw,37px);letter-spacing:-.06em;margin:36px 0 10px}.service p{font-size:13px;color:#aeb6ab;line-height:1.8;flex:1}.service>a{margin-top:25px}.project-form{margin:65px 0 0;padding:clamp(20px,4vw,50px);background:#101510;color:#f5f6f0;border:1px solid #344031;border-radius:12px;max-width:940px}.project-form h3{font-size:clamp(32px,5vw,64px);letter-spacing:-.07em;margin:0}.project-form h3 span{color:var(--lime)}.project-form>p{color:#aeb6ab}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}.form-grid label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#b7c3b0;display:flex;flex-direction:column;gap:10px}.form-grid .wide{grid-column:1/-1}.form-grid input,.form-grid select,.form-grid textarea{width:100%;background:#1a211a;color:white;border:1px solid #3a4537;border-radius:6px;padding:15px;font:14px Manrope,Arial,sans-serif;outline-offset:3px}.form-grid input:focus,.form-grid textarea:focus,.form-grid select:focus{border-color:var(--lime)}.form-submit{background:var(--lime);border:0;color:#101510;border-radius:50px;padding:17px 24px;font-weight:800;font-size:12px}.project-form small{display:block;color:#9ba797;margin-top:16px;font-size:11px}.video-preview .hover-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s;z-index:1;pointer-events:none}.tile-button:hover .hover-video.preview-playing{opacity:1}.tile-button:hover .play{opacity:0}.tile-button:focus-visible .play{background:var(--lime);color:#111}.section-top h2,.about-copy h2,.contact h2{animation:none}.section-top h2{transition:letter-spacing .7s}.section-top.visible h2{letter-spacing:-.075em}.top{position:relative;z-index:3}.nav a{transition:color .25s}
 @media(max-width:850px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.intro-inner h2{font-size:clamp(60px,17vw,100px)}.services-grid,.form-grid{grid-template-columns:1fr}.service{min-height:240px;padding:25px}.form-grid .wide{grid-column:auto}.intro-inner>img{width:140px;height:75px}}@media(prefers-reduced-motion:reduce){.intro,.reveal,.intro-inner h2{animation:none!important;transition:none!important}.hover-video{display:none}}
 
-/* SRX / Director's Cut: bespoke film leader */
-.srx-loader{position:fixed;inset:0;z-index:9999;background:#050605;color:#f5f4ed;display:grid;place-items:center;overflow:hidden;transition:opacity .7s cubic-bezier(.76,0,.24,1),visibility .7s}
-.srx-loader.is-finished{opacity:0;visibility:hidden;pointer-events:none}
-.srx-loader:before{content:"";position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff1 4px 5px);pointer-events:none}
-.srx-loader:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 10%,#0009 100%);pointer-events:none}
-.srx-loader__corner{position:absolute;top:clamp(22px,4vw,54px);left:clamp(22px,4vw,54px);font:10px 'DM Mono',monospace;letter-spacing:.22em;color:#9ca595}
-.srx-loader__corner.right{left:auto;right:clamp(22px,4vw,54px);color:#c9fa73}
-.srx-loader__center{position:relative;z-index:1;display:flex;align-items:center;flex-direction:column;width:min(540px,80vw)}
-.srx-loader__logo{display:block;width:min(390px,70vw);height:auto;max-height:230px;object-fit:contain;opacity:0;transform:scale(.88);filter:blur(12px);animation:srx-logo-reveal 1.15s .1s cubic-bezier(.2,.7,.2,1) forwards}
-.srx-loader__tag{margin-top:12px;color:#aeb5a7;font:10px 'DM Mono',monospace;letter-spacing:.34em;text-align:center}
-.srx-loader__track{height:2px;width:100%;background:#2c3428;margin-top:44px;overflow:hidden}
-.srx-loader__fill{height:100%;width:100%;background:#c9fa73;transform:scaleX(0);transform-origin:left;animation:srx-loadbar 1.9s .15s cubic-bezier(.22,.7,.22,1) forwards}
-.srx-loader__bottom{display:flex;width:100%;justify-content:space-between;margin-top:13px;color:#b2bbae;font:10px 'DM Mono',monospace;letter-spacing:.16em}
-.srx-loader__count{color:#c9fa73}
-@keyframes srx-logo-reveal{to{opacity:1;transform:scale(1);filter:blur(0)}}
-@keyframes srx-loadbar{to{transform:scaleX(1)}}
-/* Premium opening screen: restrained, cinematic, purposeful */
-.intro{background:#050705}
-.intro>video{opacity:.34;filter:saturate(.55) contrast(1.1)}
-.intro-shade{background:linear-gradient(90deg,#050705f2 0%,#050705b0 48%,#05070550 100%),linear-gradient(0deg,#050705e6,transparent 58%)}
-.intro-inner{min-height:100svh;justify-content:center;padding:90px 0 90px}
-.intro-inner>.mono{color:#d4dec9;font-size:10px;letter-spacing:.24em}
-.intro-inner>img{width:clamp(180px,23vw,280px);height:130px;object-position:left;margin:22px 0 30px;filter:drop-shadow(0 15px 25px #0008)}
-.intro-inner h2{font-size:clamp(66px,12.5vw,174px);letter-spacing:-.085em;line-height:.89;margin:8px 0 40px;text-wrap:balance}
-.intro-enter{transition:transform .25s,box-shadow .25s;background:#c9fa73;border-radius:3px;letter-spacing:.14em;padding:20px 26px}
-.intro-enter:hover{transform:translateY(-4px);box-shadow:0 12px 35px #c9fa7329}
-.intro-skip{margin-top:20px;color:#d7ddd0}
-.intro-inner:after{content:'SRX  /  DIRECTOR’S CUT  /  001';position:absolute;bottom:30px;right:0;font:10px 'DM Mono',monospace;letter-spacing:.2em;color:#d1d8c48a}
-@media(max-width:620px){.intro-inner{padding:80px 0 70px}.intro-inner>img{width:180px;height:100px}.intro-inner h2{font-size:clamp(57px,14vw,100px)}.intro-inner:after{font-size:8px;right:auto;left:0}.srx-loader__tag{font-size:8px;letter-spacing:.2em}}
-@media(prefers-reduced-motion:reduce){.srx-loader__logo,.srx-loader__fill{animation:none;opacity:1;transform:none;filter:none}.srx-loader{transition:none}}
-</style><link rel="icon" href="favicon.svg" type="image/svg+xml"></head><body><div class="srx-loader" id="srxLoader" role="status" aria-live="polite" aria-label="Loading SRX Creative"><span class="srx-loader__corner">SRX / CREATIVE STUDIO</span><span class="srx-loader__corner right">FRAME 001</span><div class="srx-loader__center"><img class="srx-loader__logo" src="media/branding/srx-creative-logo.webp" alt="SRX Creative logo"><span class="srx-loader__tag">VISUAL STORIES. REAL IMPACT.</span><div class="srx-loader__track"><div class="srx-loader__fill"></div></div><div class="srx-loader__bottom"><span>PREPARING THE EXPERIENCE</span><span class="srx-loader__count" id="srxLoadCount">00%</span></div></div></div><div id="intro" class="intro" aria-label="SRX Creative cinematic introduction"><video id="introVideo" muted playsinline autoplay loop poster="media/thumbs/video-01.jpg"><source src="media/videos/video-01.mp4" type="video/mp4"></video><div class="intro-shade"></div><div class="intro-inner"><span class="mono">INDEPENDENT CREATIVE STUDIO · EST. IN MOTION</span><img src="media/branding/srx-creative-logo.webp" alt="SRX Creative"><h2>STORIES IN<br><i>MOTION.</i></h2><button id="enterSite" class="intro-enter" type="button">EXPLORE THE PORTFOLIO <span>↗</span></button><button id="skipIntro" class="intro-skip" type="button">SKIP INTRO ↓</button></div></div>
+/* SRX 2.0 — cinematic motion direction */
+:root{--ease-film:cubic-bezier(.16,1,.3,1)}
+body{overflow-x:hidden}
+.reference-hero{min-height:100svh;perspective:1100px}
+.reference-video{transform:scale(1.085);animation:srxFilmPush 22s ease-in-out infinite alternate;will-change:transform}
+.reference-vignette{background:linear-gradient(90deg,#020504a8 0%,#02050438 52%,#02050480 100%),linear-gradient(0deg,#020504db 0%,transparent 48%,#02050472 100%)}
+.reference-grid{opacity:.42;animation:srxGridIn 1.8s var(--ease-film) both}
+.reference-hero-content{overflow:hidden}
+.reference-title{position:relative;filter:drop-shadow(0 12px 34px #0008);animation:srxHeadlineReveal 1.45s .18s var(--ease-film) both}
+.reference-title span{animation:srxHeadlineReveal 1.5s .32s var(--ease-film) both}
+.reference-kicker{animation:srxRise .9s .3s var(--ease-film) both}
+.reference-action{animation:srxRise 1s .6s var(--ease-film) both}
+.reference-bottom{animation:srxRise 1.1s .85s var(--ease-film) both}
+.reference-showreel{position:relative;overflow:hidden;transition:transform .5s var(--ease-film),background .4s,color .4s,box-shadow .4s}
+.reference-showreel:hover{transform:translateY(-5px) scale(1.035);box-shadow:0 18px 45px #0008}
+.reference-showreel:after{content:'';position:absolute;inset:-80%;background:linear-gradient(110deg,transparent 42%,#ffffff50 50%,transparent 58%);transform:translateX(-110%) rotate(10deg);transition:transform .85s var(--ease-film);pointer-events:none}
+.reference-showreel:hover:after{transform:translateX(110%) rotate(10deg)}
+.hero-scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;display:flex;align-items:center;gap:10px;color:#f5f6f0bb;font:10px 'DM Mono',monospace;letter-spacing:.18em;pointer-events:none}
+.hero-scroll-hint:before{content:'';width:1px;height:40px;background:linear-gradient(transparent,var(--lime));animation:srxScrollLine 2s ease-in-out infinite}
+.srx-progress{position:fixed;z-index:90;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--lime);box-shadow:0 0 18px #c9fa7399;pointer-events:none}
+.srx-grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.075;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+.srx-cursor-glow{position:fixed;left:0;top:0;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#c9fa7312,transparent 65%);transform:translate3d(-50%,-50%,0);z-index:1;pointer-events:none;opacity:0;transition:opacity .5s}
+.section-top h2,.about-copy h2,.contact h2{transition:transform .9s var(--ease-film),filter .9s,opacity .9s}
+.section-top.reveal:not(.visible) h2,.about-copy.reveal:not(.visible) h2,.contact h2.reveal:not(.visible){transform:translateY(48px);filter:blur(8px);opacity:.1}
+.tile{transition:transform .65s var(--ease-film),opacity .65s,filter .65s;transform-style:preserve-3d}
+.tile-button{overflow:hidden;transition:box-shadow .55s var(--ease-film),transform .55s var(--ease-film)}
+.tile-button:hover{transform:translateY(-9px);box-shadow:0 25px 55px #0009}
+.tile-button .video-preview img{transition:transform 1s var(--ease-film),filter .7s}
+.tile-button:hover .video-preview img{transform:scale(1.12);filter:saturate(1.15)}
+.poster-button{overflow:hidden;transition:transform .6s var(--ease-film),box-shadow .6s}
+.poster-button:hover{transform:translateY(-8px);box-shadow:0 25px 55px #0008}
+.poster-button img{transition:transform .9s var(--ease-film),filter .6s}
+.poster-button:hover img{transform:scale(1.075)}
+.service{position:relative;overflow:hidden;transition:background .5s,transform .6s var(--ease-film)}
+.service:before{content:'';position:absolute;left:0;top:0;width:100%;height:2px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease-film)}
+.service:hover:before{transform:scaleX(1)}
+.service:hover{transform:translateY(-5px)}
+.service h3{transition:transform .6s var(--ease-film)}.service:hover h3{transform:translateX(7px)}
+.ticker-track{will-change:transform}
+@keyframes srxFilmPush{from{transform:scale(1.085) translate3d(-1%,0,0)}to{transform:scale(1.17) translate3d(1.2%,-1%,0)}}
+@keyframes srxHeadlineReveal{from{opacity:0;transform:translate3d(0,75px,0) skewY(3deg);filter:blur(14px)}to{opacity:1;transform:translate3d(0,0,0) skewY(0);filter:blur(0)}}
+@keyframes srxRise{from{opacity:0;transform:translateY(25px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes srxGridIn{from{opacity:0}to{opacity:.42}}
+@keyframes srxScrollLine{0%,100%{opacity:.25;transform:scaleY(.55)}50%{opacity:1;transform:scaleY(1)}}
+@media(max-width:700px){.reference-hero{min-height:100svh}.hero-scroll-hint{display:none}.reference-title{letter-spacing:-.075em}.srx-cursor-glow{display:none}.tile-button:hover{transform:none}.poster-button:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.reference-video,.reference-title,.reference-title span,.reference-kicker,.reference-action,.reference-bottom,.reference-grid,.hero-scroll-hint:before{animation:none!important}.srx-grain,.srx-cursor-glow{display:none}.tile-button,.poster-button,.service,.reference-showreel{transform:none!important;transition:none!important}}
+</style><link rel="icon" href="favicon.svg" type="image/svg+xml"></head><body><div id="intro" class="intro" aria-label="SRX Creative cinematic introduction"><video id="introVideo" muted playsinline autoplay loop poster="media/thumbs/video-01.jpg"><source src="media/videos/video-01.mp4" type="video/mp4"></video><div class="intro-shade"></div><div class="intro-inner"><span class="mono">INDEPENDENT CREATIVE STUDIO · EST. IN MOTION</span><img src="media/branding/srx-creative-logo.webp" alt="SRX Creative"><h2>STORIES IN<br><i>MOTION.</i></h2><button id="enterSite" class="intro-enter" type="button">EXPLORE THE PORTFOLIO <span>↗</span></button><button id="skipIntro" class="intro-skip" type="button">SKIP INTRO ↓</button></div></div>
 <header class="container top"><a class="brand brand-logo" href="#top" aria-label="SRX Creative home"><img src="media/branding/srx-creative-logo.webp" alt="SRX Creative" width="168" height="84"></a><nav class="nav"><a href="#videos">Video work</a><a href="#posters">Graphic design</a><a href="#services">Services</a><a href="#about">About</a></nav><a class="outline" href="#contact">Let's talk ↗</a></header>
-<main id="top"><section class="hero reference-hero" aria-labelledby="reference-heading">
+<div class="srx-progress" id="srxProgress" aria-hidden="true"></div><div class="srx-grain" aria-hidden="true"></div><div class="srx-cursor-glow" id="srxCursorGlow" aria-hidden="true"></div><main id="top"><section class="hero reference-hero" aria-labelledby="reference-heading">
 <video class="reference-video" autoplay muted loop playsinline preload="metadata" poster="media/thumbs/video-01.jpg" aria-hidden="true"><source src="media/videos/video-01.mp4" type="video/mp4"></video>
 <div class="reference-vignette" aria-hidden="true"></div><div class="reference-grid" aria-hidden="true"></div>
 <div class="reference-hero-content"><div class="reference-kicker"><span>INDEPENDENT VISUAL STUDIO</span><span>FILM / EDIT / DESIGN</span></div>
 <h1 id="reference-heading" class="reference-title">SRX<span>CREATIVE</span></h1>
 <div class="reference-action"><span class="reference-mini">EST. IN MOTION</span><a href="#videos" class="reference-showreel"><span>✳</span> VIEW SHOWREEL <span>↗</span></a><span class="reference-mini">SCROLL TO EXPLORE ↓</span></div>
 <div class="reference-bottom"><p>EVERY FRAME<br>TELLS A STORY.</p><p>SELECTED FILMS, PRODUCT ADS<br>AND VISUAL DESIGN BY SREHARE.</p><a href="#contact">LET'S WORK TOGETHER ↗</a></div>
-</div></section>
+</div><div class="hero-scroll-hint" aria-hidden="true">SCROLL TO DISCOVER</div></section>
 <div class="ticker" aria-label="Video editing, product ads, wedding films, podcast edits, graphic design, visual storytelling"><div class="ticker-track"><span class="ticker-set" aria-hidden="true">VIDEO EDITING <b>✳</b> PRODUCT ADS <b>✳</b> WEDDING FILMS <b>✳</b> PODCAST EDITS <b>✳</b> GRAPHIC DESIGN <b>✳</b> VISUAL STORYTELLING <b>✳</b></span><span class="ticker-set" aria-hidden="true">VIDEO EDITING <b>✳</b> PRODUCT ADS <b>✳</b> WEDDING FILMS <b>✳</b> PODCAST EDITS <b>✳</b> GRAPHIC DESIGN <b>✳</b> VISUAL STORYTELLING <b>✳</b></span></div></div>
 <section class="container section" id="videos"><div class="section-top"><div><span class="mono kicker">01 / THE MOTION ARCHIVE</span><h2>Stories worth<br>watching again.</h2></div><p>A curated collection of 20 edits—from cinematic storytelling to product campaigns, weddings and podcast moments. Pick a category and press play.</p></div><div class="tabs" id="filters" role="group" aria-label="Filter video work"></div><div class="video-grid" id="videoGrid"></div></section>
 <section class="poster-section" id="posters"><div class="container section"><div class="section-top"><div><span class="mono kicker">02 / GRAPHIC DESIGNING</span><h2>POSTER SHOW<br>PHOTOS.</h2></div><p>Eight visual experiments in typography, composition and bold creative direction. Tap a cover to explore the full artwork.</p></div><div class="poster-grid" id="posterGrid"></div></div></section>
@@ -183,12 +199,8 @@ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches&&!window.matchM
 // Static-site contact form: no server, send via user-controlled WhatsApp.
 document.getElementById('projectForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const msg=['Hello SRX Creative! I would like to discuss a project.','', 'Name: '+f.get('name'),'Email: '+f.get('email'),'Project: '+f.get('type'),'Budget: '+f.get('budget'),'Details: '+f.get('details')].join('\n');const url='https://wa.me/917736687650?text='+encodeURIComponent(msg);window.open(url,'_blank','noopener,noreferrer')|| (window.location.href=url)});
 
-// Brand film leader: bounded duration; never waits for large video assets.
-(()=>{const el=document.getElementById('srxLoader'),num=document.getElementById('srxLoadCount');if(!el)return;
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const duration=reduced?120:1950;const start=performance.now();let finished=false;
-function close(){if(finished)return;finished=true;num.textContent='100%';el.classList.add('is-finished');setTimeout(()=>el.remove(),800)}
-function tick(now){if(finished)return;const pct=Math.min(100,Math.round((now-start)/duration*100));num.textContent=String(pct).padStart(2,'0')+'%';if(pct>=100)close();else requestAnimationFrame(tick)}
-requestAnimationFrame(tick);setTimeout(close,2900);
+// SRX cinematic scroll progress and subtle pointer lighting; no external libraries.
+(()=>{const bar=document.getElementById('srxProgress');let scheduled=false;function update(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(max>0?Math.min(1,scrollY/max):0)+')';scheduled=false}addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update,{passive:true});update();
+if(matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)').matches){const glow=document.getElementById('srxCursorGlow');let x=-500,y=-500,raf=false;document.addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;glow.style.opacity='1';if(!raf){raf=true;requestAnimationFrame(()=>{glow.style.left=x+'px';glow.style.top=y+'px';raf=false})}},{passive:true});document.addEventListener('pointerleave',()=>glow.style.opacity='0')}
 })();
 </script></body></html>
